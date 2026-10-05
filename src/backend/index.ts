@@ -1,5 +1,5 @@
 import type { Router } from "express";
-import type { PluginContext } from "@termix/plugin-sdk/backend";
+import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import { enrollments } from "./tables.js";
 import { createEnrollmentRepository } from "./repository.js";
 import { createTotpService, FACTOR_ID, normalizeCode } from "./totp.js";

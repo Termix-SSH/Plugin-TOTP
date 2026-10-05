@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, Copy, X } from "lucide-react";
 import { toast } from "sonner";
-import { Button, Input, copyToClipboard } from "@termix/plugin-sdk/ui";
-import { usePluginApi, useTranslation } from "@termix/plugin-sdk/frontend";
+import { Button, Input, copyToClipboard } from "@termix-ssh/plugin-sdk/ui";
+import { usePluginApi, useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import { apiErrorMessage } from "./totp-input";
 
 type Step = "idle" | "setup" | "verify" | "backup";

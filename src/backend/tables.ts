@@ -3,7 +3,7 @@ import {
   encryptedText,
   refUser,
   timestamp,
-} from "@termix/plugin-sdk/db";
+} from "@termix-ssh/plugin-sdk/db";
 
 /**
  * One row per user who started or finished setup. The secret columns hold

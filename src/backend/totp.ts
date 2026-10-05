@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 import speakeasy from "speakeasy";
-import type { PluginContext } from "@termix/plugin-sdk/backend";
+import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import type { EnrollmentRepository } from "./repository.js";
 
 export const FACTOR_ID = "totp";

@@ -5,7 +5,7 @@ import speakeasy from "speakeasy";
 import {
   LoginMethodError,
   type PluginContext,
-} from "@termix/plugin-sdk/backend";
+} from "@termix-ssh/plugin-sdk/backend";
 import { FACTOR_ID, normalizeCode, type TotpService } from "./totp.js";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

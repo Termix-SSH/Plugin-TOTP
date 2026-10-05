@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { Button, Input } from "@termix/plugin-sdk/ui";
+import { Button, Input } from "@termix-ssh/plugin-sdk/ui";
 import {
   useTranslation,
   type SecondFactorUIProps,
-} from "@termix/plugin-sdk/frontend";
+} from "@termix-ssh/plugin-sdk/frontend";
 import { isValidTotpInput, normalizeTotpInput } from "./totp-input";
 
 const primaryButton =
