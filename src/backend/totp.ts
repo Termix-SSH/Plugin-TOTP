@@ -17,11 +17,11 @@ export function generateBackupCode(): string {
   return code;
 }
 
-export function generateBackupCodes(): string[] {
+function generateBackupCodes(): string[] {
   return Array.from({ length: BACKUP_CODE_COUNT }, () => generateBackupCode());
 }
 
-export function verifyTotpCode(secret: string, code: string): boolean {
+function verifyTotpCode(secret: string, code: string): boolean {
   return speakeasy.totp.verify({
     secret,
     encoding: "base32",
