@@ -16,12 +16,6 @@ TOTP asks for a code from an authenticator app after you sign in.
 
 <br />
 
-## Install
-
-TOTP ships with [Termix](https://github.com/Termix-SSH/Termix). Admins can turn it on or off, update it or install it again from the Plugins tab. Want to see it first? Try the [demo](https://demo.termix.site/), any username and password works.
-
-<br />
-
 ## Features
 
 - Works with any authenticator app
