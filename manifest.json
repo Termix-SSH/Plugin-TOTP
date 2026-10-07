@@ -10,6 +10,11 @@
   "repository": "https://github.com/Termix-SSH/Plugin-TOTP",
   "category": "Access & Security",
   "icon": "ShieldCheck",
+  "features": [
+    "Works with any authenticator app",
+    "Backup codes in case you lose your phone",
+    "More than one device"
+  ],
   "engine": {
     "termix": ">=26.10.0",
     "api": "1"
