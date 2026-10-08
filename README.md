@@ -14,6 +14,8 @@
 
 TOTP asks for a code from an authenticator app after you sign in.
 
+Read the [docs](https://docs.termix.site/plugins/totp) to set it up and use it.
+
 <br />
 
 ## Features

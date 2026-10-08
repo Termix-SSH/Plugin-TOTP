@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Button, Input, copyToClipboard } from "@termix-ssh/plugin-sdk/ui";
 import { usePluginApi, useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import { apiErrorMessage } from "./totp-input";
+import { docsUrl } from "./docs";
 
 type Step = "idle" | "setup" | "verify" | "backup";
 
@@ -140,7 +141,7 @@ export function TotpEnrollment() {
           <div className="flex items-center gap-2">
             <span className="text-xs font-medium">{t("enrollment.title")}</span>
             <a
-              href="https://docs.termix.site/features/authentication/totp"
+              href={docsUrl()}
               target="_blank"
               rel="noreferrer"
               className="text-[10px] text-accent-brand hover:underline"
