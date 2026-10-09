@@ -36,6 +36,31 @@ export function registerTotpRoutes(
     return "Termix";
   }
 
+  /**
+   * Codes asked for while signed in get the same lockout as the login step,
+   * so a stolen session can't guess its way to the secret or turn TOTP off.
+   */
+  async function checkWithLimit(
+    req: Request,
+    res: Response,
+    userId: string,
+    code: string,
+  ): Promise<boolean | null | "locked"> {
+    const ip = req.ip || "unknown";
+    const key = `manage:${userId}`;
+    const lock = await ctx.auth.loginRateLimit.isLocked(ip, key);
+    if (lock.locked) {
+      res.status(429).json({
+        error: "Too many attempts. Please try again later.",
+        remainingTime: lock.remainingTime,
+      });
+      return "locked";
+    }
+    const ok = await totp.checkCode(userId, code);
+    if (ok === false) await ctx.auth.loginRateLimit.recordFailure(ip, key);
+    return ok;
+  }
+
   const fail = (res: Response, message: string, error: unknown) => {
     ctx.log.error(
       message,
@@ -86,6 +111,8 @@ export function registerTotpRoutes(
    *         description: A code is required.
    *       401:
    *         description: Invalid code.
+   *       429:
+   *         description: Too many wrong codes.
    */
   router.post("/setup", async (req: Request, res: Response) => {
     const userId = actor();
@@ -96,9 +123,9 @@ export function registerTotpRoutes(
         if (!credential) {
           return res.status(400).json({ error: "A TOTP code is required" });
         }
-        if (!(await totp.checkCode(userId, credential))) {
-          return res.status(401).json({ error: "Invalid TOTP code" });
-        }
+        const ok = await checkWithLimit(req, res, userId, credential);
+        if (ok === "locked") return;
+        if (!ok) return res.status(401).json({ error: "Invalid TOTP code" });
         const secret = await totp.activeSecret(userId);
         if (!secret) {
           return res.status(409).json({ error: "TOTP secret is unavailable" });
@@ -202,6 +229,8 @@ export function registerTotpRoutes(
    *         description: Missing code or TOTP is not on.
    *       401:
    *         description: Invalid code.
+   *       429:
+   *         description: Too many wrong codes.
    */
   router.post("/disable", async (req: Request, res: Response) => {
     const userId = actor();
@@ -210,7 +239,8 @@ export function registerTotpRoutes(
       return res.status(400).json({ error: "A TOTP code is required" });
     }
     try {
-      const ok = await totp.checkCode(userId, code);
+      const ok = await checkWithLimit(req, res, userId, code);
+      if (ok === "locked") return;
       if (ok === null) {
         return res.status(400).json({ error: "TOTP is not enabled" });
       }
@@ -247,6 +277,8 @@ export function registerTotpRoutes(
    *         description: Missing code or TOTP is not on.
    *       401:
    *         description: Invalid code.
+   *       429:
+   *         description: Too many wrong codes.
    */
   router.post("/backup-codes", async (req: Request, res: Response) => {
     const userId = actor();
@@ -255,7 +287,8 @@ export function registerTotpRoutes(
       return res.status(400).json({ error: "A TOTP code is required" });
     }
     try {
-      const ok = await totp.checkCode(userId, code);
+      const ok = await checkWithLimit(req, res, userId, code);
+      if (ok === "locked") return;
       if (ok === null) {
         return res.status(400).json({ error: "TOTP is not enabled" });
       }

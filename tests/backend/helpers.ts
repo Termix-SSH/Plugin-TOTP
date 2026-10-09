@@ -37,6 +37,7 @@ export async function startServer(
     users?: string[];
     capabilities?: string[];
     refuseEnrollment?: string;
+    loginAttemptLimit?: number;
   } = {},
 ): Promise<TestServer> {
   const db = await createTestDb(pluginDir);
@@ -54,6 +55,7 @@ export async function startServer(
     db: db.database,
     router: () => (router = express.Router()),
     refuseEnrollment: options.refuseEnrollment,
+    loginAttemptLimit: options.loginAttemptLimit,
   });
 
   const { activate } = await import("../../src/backend/index.js");

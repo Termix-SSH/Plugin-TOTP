@@ -10,8 +10,13 @@ afterEach(async () => {
   server = null;
 });
 
-const codeFor = (secret: string) =>
-  speakeasy.totp({ secret, encoding: "base32" });
+// Each step is accepted once, so tests that need several codes take later ones.
+const codeFor = (secret: string, step = 0) =>
+  speakeasy.totp({
+    secret,
+    encoding: "base32",
+    time: Math.floor(Date.now() / 1000) + step * 30,
+  });
 
 async function enrol(target: TestServer, user = "user-1") {
   const setup = await target.request("POST", "/setup", { user, body: {} });
@@ -118,7 +123,7 @@ describe("enrolment", () => {
       ).status,
     ).toBe(401);
     const again = await server.request("POST", "/setup", {
-      body: { credential: codeFor(secret) },
+      body: { credential: codeFor(secret, 1) },
     });
     expect(again.body).toMatchObject({ secret, additional: true });
   });
@@ -134,7 +139,7 @@ describe("enrolment", () => {
       ).status,
     ).toBe(401);
     const off = await server.request("POST", "/disable", {
-      body: { totp_code: codeFor(secret) },
+      body: { totp_code: codeFor(secret, 1) },
     });
     expect(off.status).toBe(200);
     expect(server.mock.auth.enrollments.has("user-1:totp")).toBe(false);
@@ -145,7 +150,7 @@ describe("enrolment", () => {
     server = await startServer();
     const { secret, backupCodes } = await enrol(server);
     const fresh = await server.request("POST", "/backup-codes", {
-      body: { totp_code: codeFor(secret) },
+      body: { totp_code: codeFor(secret, 1) },
     });
     expect(fresh.body.backup_codes).toHaveLength(8);
     expect(
@@ -175,8 +180,45 @@ describe("login", () => {
       false,
     );
     expect(
-      await factor(server).verify("user-1", { totp_code: codeFor(secret) }),
+      await factor(server).verify("user-1", { totp_code: codeFor(secret, 1) }),
     ).toBe(true);
+  });
+
+  it("accepts a code only once, including the one that turned TOTP on", async () => {
+    server = await startServer();
+    const setup = await server.request("POST", "/setup", { body: {} });
+    const secret: string = setup.body.secret;
+    const first = codeFor(secret);
+    await server.request("POST", "/enable", { body: { totp_code: first } });
+    expect(await factor(server).verify("user-1", { totp_code: first })).toBe(
+      false,
+    );
+    const next = codeFor(secret, 1);
+    expect(await factor(server).verify("user-1", { totp_code: next })).toBe(
+      true,
+    );
+    expect(await factor(server).verify("user-1", { totp_code: next })).toBe(
+      false,
+    );
+    expect(
+      await factor(server).verify("user-1", { totp_code: codeFor(secret, -1) }),
+    ).toBe(false);
+  });
+
+  it("locks out wrong codes on the signed-in routes", async () => {
+    server = await startServer({ loginAttemptLimit: 3 });
+    const { secret } = await enrol(server);
+    for (let i = 0; i < 3; i++) {
+      const wrong = await server.request("POST", "/disable", {
+        body: { totp_code: "000000" },
+      });
+      expect(wrong.status).toBe(401);
+    }
+    const locked = await server.request("POST", "/disable", {
+      body: { totp_code: codeFor(secret, 1) },
+    });
+    expect(locked.status).toBe(429);
+    expect(await factor(server).isEnrolled("user-1")).toBe(true);
   });
 
   it("accepts each backup code once, typed in any case", async () => {

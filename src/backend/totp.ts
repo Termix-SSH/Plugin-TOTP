@@ -21,13 +21,18 @@ function generateBackupCodes(): string[] {
   return Array.from({ length: BACKUP_CODE_COUNT }, () => generateBackupCode());
 }
 
-function verifyTotpCode(secret: string, code: string): boolean {
-  return speakeasy.totp.verify({
+const STEP_SECONDS = 30;
+
+/** The time step a code matched, or null when it is not a current code. */
+function matchTotpStep(secret: string, code: string): number | null {
+  const match = speakeasy.totp.verifyDelta({
     secret,
     encoding: "base32",
     token: code,
     window: 2,
   });
+  if (!match) return null;
+  return Math.floor(Date.now() / 1000 / STEP_SECONDS) + match.delta;
 }
 
 export function normalizeCode(value: unknown): string {
@@ -58,6 +63,10 @@ export function createTotpService(
     }
   }
 
+  // The last time step each user signed in with, so a code can't be used
+  // twice. Kept in memory: a restart only reopens the current window.
+  const lastStep = new Map<string, number>();
+
   async function sealBackupCodes(codes: string[]): Promise<string> {
     return ctx.secrets.seal(JSON.stringify(codes));
   }
@@ -81,7 +90,12 @@ export function createTotpService(
       const secret = await unseal(row?.secret ?? null);
       if (!row || !secret) return null;
       if (!code) return false;
-      if (verifyTotpCode(secret, code)) return true;
+      const step = matchTotpStep(secret, code);
+      if (step !== null) {
+        if (step <= (lastStep.get(userId) ?? -1)) return false;
+        lastStep.set(userId, step);
+        return true;
+      }
 
       const codes = await readBackupCodes(row.backupCodes);
       const index = codes.indexOf(code);
@@ -108,7 +122,9 @@ export function createTotpService(
         (await repository.find(userId))?.pendingSecret ?? null,
       );
       if (!pending) return { status: "not-started" as const };
-      if (!verifyTotpCode(pending, code)) return { status: "invalid" as const };
+      const step = matchTotpStep(pending, code);
+      if (step === null) return { status: "invalid" as const };
+      lastStep.set(userId, step);
       return { status: "ok" as const, secret: pending };
     },
 
@@ -131,6 +147,9 @@ export function createTotpService(
       return codes;
     },
 
-    remove: (userId: string) => repository.remove(userId),
+    remove: (userId: string) => {
+      lastStep.delete(userId);
+      return repository.remove(userId);
+    },
   };
 }
