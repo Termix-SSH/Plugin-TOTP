@@ -1,0 +1,42 @@
+{
+  "title": "Autentifikatoriaus programėlė",
+  "factor": "Autentifikatoriaus kodas",
+  "challenge": {
+    "enterCode": "Įveskite patvirtinimo kodą",
+    "verify": "Patvirtinti kodą",
+    "backupCodeHint": "Taip pat galite įvesti vieną iš savo atsarginių kodų."
+  },
+  "enrollment": {
+    "title": "TOTP autentifikatorius",
+    "docs": "Dokumentacija",
+    "on": "2FA įjungta",
+    "off": "Pridėkite papildomą prisijungimo saugumą",
+    "enable": "Įjungti",
+    "disable": "Išjungti",
+    "addDevice": "Pridėti įrenginį",
+    "addTitle": "Pridėti autentifikatoriaus įrenginį",
+    "addDescription": "Patvirtinkite kodu iš savo autentifikatoriaus arba atsarginiu kodu, kad užregistruotumėte kitą įrenginį su tuo pačiu raktu.",
+    "addScanInstructions": "Nuskenuokite šį QR kodą su papildomu autentifikatoriumi. Esami autentifikatoriai ir toliau veiks.",
+    "addSuccess": "Papildomas autentifikatorius sėkmingai užregistruotas",
+    "addFailed": "Nepavyko pridėti autentifikatoriaus",
+    "codeRequired": "Įveskite TOTP kodą arba atsarginį kodą",
+    "codePlaceholder": "TOTP kodas arba atsarginis kodas",
+    "setupTitle": "TOTP nustatymas",
+    "setupFailed": "Nepavyko pradėti TOTP nustatymo",
+    "qrCode": "QR kodas",
+    "secretCopied": "Slaptas raktas nukopijuotas į iškarpinę",
+    "instructions": "Nuskenuokite QR kodą arba įveskite slaptą raktą į savo autentifikatoriaus programėlę, tada įveskite 6 skaitmenų kodą",
+    "continueVerify": "Tęsti prie patvirtinimo",
+    "verifyTitle": "Patvirtinti kodą",
+    "verify": "Patvirtinti",
+    "enter6Digits": "Įveskite 6 skaitmenų kodą",
+    "enabledSuccess": "Dvejetainė autentifikacija įjungta",
+    "invalidCode": "Neteisingas kodas, bandykite dar kartą",
+    "disableTitle": "Išjungti 2FA",
+    "disabledSuccess": "Dvejetainė autentifikacija išjungta",
+    "disableFailed": "Nepavyko išjungti 2FA",
+    "backupTitle": "Atsarginiai kodai",
+    "downloadBackup": "Atsisiųsti atsarginius kodus",
+    "done": "Atlikta"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Aplikácia Authenticator",
+  "factor": "Kód z aplikácie Authenticator",
+  "challenge": {
+    "enterCode": "Zadajte overovací kód",
+    "verify": "Overiť kód",
+    "backupCodeHint": "Môžete zadať aj jeden zo svojich záložných kódov."
+  },
+  "enrollment": {
+    "title": "TOTP Authenticator",
+    "docs": "Dokumentácia",
+    "on": "2FA je povolená",
+    "off": "Pridať ďalšiu úroveň bezpečnosti pri prihlásení",
+    "enable": "Povoliť",
+    "disable": "Zakázať",
+    "addDevice": "Pridať zariadenie",
+    "addTitle": "Pridať zariadenie authenticator",
+    "addDescription": "Potvrďte pomocou kódu z vášho authenticatoru alebo záložného kódu, aby ste zaregistrovali ďalšie zariadenie s rovnakým kľúčom.",
+    "addScanInstructions": "Naskenujte tento QR kód pomocou ďalšieho authenticatoru. Existujúce authenticatory budú naďalej fungovať.",
+    "addSuccess": "Ďalší authenticator bol zaregistrovaný",
+    "addFailed": "Nepodarilo sa pridať authenticator",
+    "codeRequired": "Zadajte TOTP kód alebo záložný kód",
+    "codePlaceholder": "TOTP kód alebo záložný kód",
+    "setupTitle": "Nastavenie TOTP",
+    "setupFailed": "Nepodarilo sa spustiť nastavenie TOTP",
+    "qrCode": "QR kód",
+    "secretCopied": "Tajný kľúč bol skopírovaný do schránky",
+    "instructions": "Naskenujte QR kód alebo zadajte tajný kľúč do vašej aplikácie authenticator a potom zadajte 6-miestny kód",
+    "continueVerify": "Pokračovať k overeniu",
+    "verifyTitle": "Overiť kód",
+    "verify": "Overiť",
+    "enter6Digits": "Zadajte 6-miestny kód",
+    "enabledSuccess": "Dvojfaktorové overenie bolo povolené",
+    "invalidCode": "Neplatný kód, skúste to znova",
+    "disableTitle": "Zakázať 2FA",
+    "disabledSuccess": "Dvojfaktorové overenie bolo zakázané",
+    "disableFailed": "Nepodarilo sa zakázať 2FA",
+    "backupTitle": "Záložné kódy",
+    "downloadBackup": "Stiahnuť záložné kódy",
+    "done": "Hotovo"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Autentifikatora lietotne",
+  "factor": "Autentifikatora kods",
+  "challenge": {
+    "enterCode": "Ievadiet verifikācijas kodu",
+    "verify": "Verificēt kodu",
+    "backupCodeHint": "Varat arī ievadīt vienu no saviem rezerves kodiem."
+  },
+  "enrollment": {
+    "title": "TOTP autentifikators",
+    "docs": "Dokumentācija",
+    "on": "2FA ir iespējots",
+    "off": "Pievienot papildu pieteikšanās drošību",
+    "enable": "Iespējot",
+    "disable": "Atspējot",
+    "addDevice": "Pievienot ierīci",
+    "addTitle": "Pievienot autentifikatora ierīci",
+    "addDescription": "Apstipriniet ar kodu no sava autentifikatora vai rezerves kodu, lai reģistrētu citu ierīci ar to pašu atslēgu.",
+    "addScanInstructions": "Skenējiet šo QR kodu ar papildu autentifikatoru. Esošie autentifikatori turpinās strādāt.",
+    "addSuccess": "Papildu autentifikators reģistrēts",
+    "addFailed": "Neizdevās pievienot autentifikatoru",
+    "codeRequired": "Ievadiet TOTP kodu vai rezerves kodu",
+    "codePlaceholder": "TOTP kods vai rezerves kods",
+    "setupTitle": "TOTP iestatīšana",
+    "setupFailed": "Neizdevās sākt TOTP iestatīšanu",
+    "qrCode": "QR kods",
+    "secretCopied": "Noslēpums nokopēts starpliktuvē",
+    "instructions": "Skenējiet QR kodu vai ievadiet noslēpumu savā autentifikatora lietotnē, pēc tam ievadiet 6 ciparu kodu",
+    "continueVerify": "Turpināt uz Verifikāciju",
+    "verifyTitle": "Verificēt kodu",
+    "verify": "Verificēt",
+    "enter6Digits": "Ievadiet 6 ciparu kodu",
+    "enabledSuccess": "Divu faktoru autentifikācija iespējota",
+    "invalidCode": "Nederīgs kods, lūdzu, mēģiniet vēlreiz",
+    "disableTitle": "Atspējot 2FA",
+    "disabledSuccess": "Divu faktoru autentifikācija atspējota",
+    "disableFailed": "Neizdevās atspējot 2FA",
+    "backupTitle": "Rezerves kodi",
+    "downloadBackup": "Lejupielādēt rezerves kodus",
+    "done": "Gatavs"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Autentifitseerimise rakendus",
+  "factor": "Autentifitseerimiskood",
+  "challenge": {
+    "enterCode": "Sisestage kinnituskood",
+    "verify": "Kinnita kood",
+    "backupCodeHint": "Saate sisestada ka ühe oma varukoodidest."
+  },
+  "enrollment": {
+    "title": "TOTP autentifitseerija",
+    "docs": "Dokumentatsioon",
+    "on": "2FA on lubatud",
+    "off": "Lisage sisselogimisele täiendavat turvalisust",
+    "enable": "Luba",
+    "disable": "Keela",
+    "addDevice": "Lisa seade",
+    "addTitle": "Lisa autentifitseerimisseade",
+    "addDescription": "Kinnitage autentifitseerijast saadud või varukoodiga, et registreerida sama võtmega uus seade.",
+    "addScanInstructions": "Skaneerige see QR-kood lisautentifitseerijaga. Olemasolevad autentifitseerijad jätkavad tööd.",
+    "addSuccess": "Lisautentifitseerija on registreeritud",
+    "addFailed": "Autentifitseerija lisamine ebaõnnestus",
+    "codeRequired": "Sisestage TOTP- või varukood",
+    "codePlaceholder": "TOTP- või varukood",
+    "setupTitle": "TOTP seadistamine",
+    "setupFailed": "TOTP seadistamise käivitamine ebaõnnestus",
+    "qrCode": "QR-kood",
+    "secretCopied": "Salajane kood on kopeeritud lõikelauale",
+    "instructions": "Skaneerige QR-kood või sisestage salajane kood autentifitseerimise rakendusse ja seejärel sisestage 6-kohaline kood",
+    "continueVerify": "Jätka kinnituse juurde",
+    "verifyTitle": "Kinnita kood",
+    "verify": "Kinnita",
+    "enter6Digits": "Sisestage 6-kohaline kood",
+    "enabledSuccess": "Kaheastmeline autentimine on lubatud",
+    "invalidCode": "Vigane kood, proovige uuesti",
+    "disableTitle": "Keela 2FA",
+    "disabledSuccess": "Kaheastmeline autentimine on keelatud",
+    "disableFailed": "2FA keelamine ebaõnnestus",
+    "backupTitle": "Varukoodid",
+    "downloadBackup": "Laadi alla varukoodid",
+    "done": "Valmis"
+  }
+}

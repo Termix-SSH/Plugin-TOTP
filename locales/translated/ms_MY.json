@@ -1,0 +1,42 @@
+{
+  "title": "Aplikasi Pengesah",
+  "factor": "Kod pengesah",
+  "challenge": {
+    "enterCode": "Masukkan kod pengesahan",
+    "verify": "Sahkan Kod",
+    "backupCodeHint": "Anda juga boleh memasukkan salah satu kod sandaran anda."
+  },
+  "enrollment": {
+    "title": "Pengesah TOTP",
+    "docs": "Dokumen",
+    "on": "2FA telah diaktifkan",
+    "off": "Tambahkan keselamatan log masuk tambahan",
+    "enable": "Aktifkan",
+    "disable": "Nyahaktif",
+    "addDevice": "Tambah peranti",
+    "addTitle": "Tambah peranti pengesah",
+    "addDescription": "Sahkan dengan kod daripada pengesah anda atau kod sandaran untuk mendaftar peranti lain dengan kunci yang sama.",
+    "addScanInstructions": "Imbas kod QR ini dengan pengesah tambahan. Pengesah sedia ada akan terus berfungsi.",
+    "addSuccess": "Pengesah tambahan telah didaftarkan",
+    "addFailed": "Gagal menambah pengesah",
+    "codeRequired": "Masukkan kod TOTP atau kod sandaran",
+    "codePlaceholder": "Kod TOTP atau kod sandaran",
+    "setupTitle": "Sediakan TOTP",
+    "setupFailed": "Gagal memulakan persediaan TOTP",
+    "qrCode": "Kod QR",
+    "secretCopied": "Rahsia disalin ke papan klip",
+    "instructions": "Imbas kod QR atau masukkan rahsia dalam aplikasi pengesah anda, kemudian masukkan kod 6 digit",
+    "continueVerify": "Teruskan ke Pengesahan",
+    "verifyTitle": "Sahkan Kod",
+    "verify": "Sahkan",
+    "enter6Digits": "Masukkan kod 6 digit",
+    "enabledSuccess": "Pengesahan dua faktor telah diaktifkan",
+    "invalidCode": "Kod tidak sah, sila cuba lagi",
+    "disableTitle": "Nyahaktif 2FA",
+    "disabledSuccess": "Pengesahan dua faktor telah dinyahaktifkan",
+    "disableFailed": "Gagal menyahaktifkan 2FA",
+    "backupTitle": "Kod Sandaran",
+    "downloadBackup": "Muat Turun Kod Sandaran",
+    "done": "Selesai"
+  }
+}

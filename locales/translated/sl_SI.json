@@ -1,0 +1,42 @@
+{
+  "title": "Aplikacija za preverjanje identitete",
+  "factor": "Koda za preverjanje identitete",
+  "challenge": {
+    "enterCode": "Vnesite preverilno kodo",
+    "verify": "Preveri kodo",
+    "backupCodeHint": "Lahko vnesete tudi eno od svojih rezervnih kod."
+  },
+  "enrollment": {
+    "title": "TOTP preverjanje identitete",
+    "docs": "Dokumentacija",
+    "on": "Dvofaktorsko preverjanje je omogočeno",
+    "off": "Dodajte dodatno varnost pri prijavi",
+    "enable": "Omogoči",
+    "disable": "Onemogoči",
+    "addDevice": "Dodaj napravo",
+    "addTitle": "Dodaj napravo za preverjanje identitete",
+    "addDescription": "Potrdite s kodo iz svoje aplikacije za preverjanje identitete ali z rezervno kodo, da registrirate drugo napravo z istim ključem.",
+    "addScanInstructions": "Skenirajte to QR kodo z dodatno aplikacijo za preverjanje identitete. Obstoječe aplikacije bodo še naprej delovale.",
+    "addSuccess": "Dodatna aplikacija za preverjanje identitete je registrirana",
+    "addFailed": "Dodajanje aplikacije za preverjanje identitete ni uspelo",
+    "codeRequired": "Vnesite TOTP kodo ali rezervno kodo",
+    "codePlaceholder": "TOTP koda ali rezervna koda",
+    "setupTitle": "Nastavitev TOTP",
+    "setupFailed": "Zagon nastavitve TOTP ni uspel",
+    "qrCode": "QR koda",
+    "secretCopied": "Skrivni ključ je kopiran v odložišče",
+    "instructions": "Skenirajte QR kodo ali vnesite skrivni ključ v svojo aplikacijo za preverjanje identitete, nato vnesite 6-mestno kodo",
+    "continueVerify": "Nadaljuj na preverjanje",
+    "verifyTitle": "Preveri kodo",
+    "verify": "Preveri",
+    "enter6Digits": "Vnesite 6-mestno kodo",
+    "enabledSuccess": "Dvofaktorsko preverjanje je omogočeno",
+    "invalidCode": "Neveljavna koda, poskusite znova",
+    "disableTitle": "Onemogoči dvofaktorsko preverjanje",
+    "disabledSuccess": "Dvofaktorsko preverjanje je onemogočeno",
+    "disableFailed": "Onemogočanje dvofaktorskega preverjanja ni uspelo",
+    "backupTitle": "Rezervne kode",
+    "downloadBackup": "Prenesi rezervne kode",
+    "done": "Končano"
+  }
+}

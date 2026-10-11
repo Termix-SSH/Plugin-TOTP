@@ -1,0 +1,42 @@
+{
+  "title": "Aplikacija za autentifikaciju",
+  "factor": "Kod za autentifikaciju",
+  "challenge": {
+    "enterCode": "Unesite kod za provjeru",
+    "verify": "Potvrdi kod",
+    "backupCodeHint": "Možete unijeti i jedan od sigurnosnih kodova."
+  },
+  "enrollment": {
+    "title": "TOTP autentifikator",
+    "docs": "Dokumentacija",
+    "on": "Dvofaktorska autentifikacija je uključena",
+    "off": "Dodajte dodatnu sigurnost pri prijavi",
+    "enable": "Uključi",
+    "disable": "Isključi",
+    "addDevice": "Dodaj uređaj",
+    "addTitle": "Dodaj uređaj za autentifikaciju",
+    "addDescription": "Potvrdite kodom iz autentifikatora ili sigurnosnim kodom kako biste registrirali još jedan uređaj s istim ključem.",
+    "addScanInstructions": "Skenirajte ovaj QR kod dodatnim autentifikatorom. Postojeći autentifikatori će i dalje raditi.",
+    "addSuccess": "Dodatni autentifikator je registriran",
+    "addFailed": "Neuspjelo dodavanje autentifikatora",
+    "codeRequired": "Unesite TOTP kod ili sigurnosni kod",
+    "codePlaceholder": "TOTP kod ili sigurnosni kod",
+    "setupTitle": "Postavi TOTP",
+    "setupFailed": "Neuspjelo pokretanje postavljanja TOTP-a",
+    "qrCode": "QR kod",
+    "secretCopied": "Tajna je kopirana u međuspremnik",
+    "instructions": "Skenirajte QR kod ili unesite tajnu u aplikaciju za autentifikaciju, zatim unesite 6-znamenkasti kod",
+    "continueVerify": "Nastavi na potvrdu",
+    "verifyTitle": "Potvrdi kod",
+    "verify": "Potvrdi",
+    "enter6Digits": "Unesite 6-znamenkasti kod",
+    "enabledSuccess": "Dvofaktorska autentifikacija je uključena",
+    "invalidCode": "Nevažeći kod, pokušajte ponovno",
+    "disableTitle": "Isključi dvofaktorsku autentifikaciju",
+    "disabledSuccess": "Dvofaktorska autentifikacija je isključena",
+    "disableFailed": "Neuspjelo isključivanje dvofaktorske autentifikacije",
+    "backupTitle": "Sigurnosni kodovi",
+    "downloadBackup": "Preuzmi sigurnosne kodove",
+    "done": "Gotovo"
+  }
+}
