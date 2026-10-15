@@ -9,6 +9,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/Termix-SSH/Plugin-TOTP",
   "docs": "https://docs.termix.site/plugins/totp",
+  "video": "https://www.youtube.com/watch?v=nla4ArQGpfU",
   "category": "Access & Security",
   "icon": "ShieldCheck",
   "features": [
