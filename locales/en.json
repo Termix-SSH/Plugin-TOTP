@@ -38,5 +38,9 @@
     "backupTitle": "Backup Codes",
     "downloadBackup": "Download Backup Codes",
     "done": "Done"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Two-factor sign in with a code from an authenticator app, with backup codes."
   }
 }
