@@ -38,5 +38,9 @@
     "backupTitle": "Reservkoder",
     "downloadBackup": "Ladda ner reservkoder",
     "done": "Klar"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Tvåfaktorsinloggning med en kod från en autentiseringsapp, med säkerhetskoder."
   }
 }

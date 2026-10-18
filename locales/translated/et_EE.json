@@ -38,5 +38,9 @@
     "backupTitle": "Varukoodid",
     "downloadBackup": "Laadi alla varukoodid",
     "done": "Valmis"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Kaheastmeline sisselogimine autentimusrakenduse koodiga koos varukoodidega."
   }
 }

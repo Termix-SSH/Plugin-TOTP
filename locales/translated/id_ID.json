@@ -38,5 +38,9 @@
     "backupTitle": "Kode Cadangan",
     "downloadBackup": "Unduh Kode Cadangan",
     "done": "Selesai"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Masuk dua faktor dengan kode dari aplikasi autentikator, beserta kode cadangan."
   }
 }

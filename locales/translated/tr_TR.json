@@ -38,5 +38,9 @@
     "backupTitle": "Yedek Kodlar",
     "downloadBackup": "Yedek Kodları İndir",
     "done": "Tamam"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Kimlik doğrulayıcı uygulamasından gelen bir kodla iki faktörlü giriş, yedek kodlarla."
   }
 }

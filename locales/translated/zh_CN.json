@@ -38,5 +38,9 @@
     "backupTitle": "备用代码",
     "downloadBackup": "下载备用代码",
     "done": "完成"
+  },
+  "plugin": {
+    "name": "TOTP 两步验证",
+    "description": "使用身份验证器应用中的验证码进行两步验证登录，并提供备用码。"
   }
 }

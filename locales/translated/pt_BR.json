@@ -38,5 +38,9 @@
     "backupTitle": "Códigos de Backup",
     "downloadBackup": "Baixar Códigos de Backup",
     "done": "Concluído"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Login com dois fatores usando um código de um aplicativo autenticador, com códigos de backup."
   }
 }

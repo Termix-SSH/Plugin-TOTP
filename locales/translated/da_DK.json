@@ -38,5 +38,9 @@
     "backupTitle": "Backup-koder",
     "downloadBackup": "Download backup-koder",
     "done": "Færdig"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "To-faktor-login med en kode fra en autentifikator-app, med backup-koder."
   }
 }

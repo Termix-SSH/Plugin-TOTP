@@ -38,5 +38,9 @@
     "backupTitle": "Kody awaryjne",
     "downloadBackup": "Pobierz kody awaryjne",
     "done": "Gotowe"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Logowanie dwuetapowe za pomocą kodu z aplikacji uwierzytelniającej, z kodami awaryjnymi."
   }
 }

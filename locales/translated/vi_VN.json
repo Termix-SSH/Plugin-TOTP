@@ -38,5 +38,9 @@
     "backupTitle": "Mã dự phòng",
     "downloadBackup": "Tải xuống mã dự phòng",
     "done": "Xong"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Đăng nhập xác thực hai yếu tố bằng mã từ ứng dụng xác thực, kèm theo mã dự phòng."
   }
 }

@@ -38,5 +38,9 @@
     "backupTitle": "รหัสสำรอง",
     "downloadBackup": "ดาวน์โหลดรหัสสำรอง",
     "done": "เสร็จสิ้น"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "การเข้าสู่ระบบสองขั้นตอนด้วยรหัสจากแอป Authenticator พร้อมรหัสสำรอง"
   }
 }

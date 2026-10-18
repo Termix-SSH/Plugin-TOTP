@@ -38,5 +38,9 @@
     "backupTitle": "Códigos de respaldo",
     "downloadBackup": "Descargar códigos de respaldo",
     "done": "Hecho"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Inicio de sesión con dos factores mediante un código de una aplicación de autenticación, con códigos de respaldo."
   }
 }

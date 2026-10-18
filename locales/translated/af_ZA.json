@@ -38,5 +38,9 @@
     "backupTitle": "Rugsteunkodes",
     "downloadBackup": "Laai rugsteunkodes af",
     "done": "Klaar"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Tweefaktor-aanmelding met 'n kode van 'n autentikator-toepassing, met rugsteunkodes."
   }
 }

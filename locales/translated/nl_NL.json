@@ -38,5 +38,9 @@
     "backupTitle": "Back-upcodes",
     "downloadBackup": "Back-upcodes downloaden",
     "done": "Klaar"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Tweestapsverificatie met een code uit een authenticator-app, inclusief back-upcodes."
   }
 }

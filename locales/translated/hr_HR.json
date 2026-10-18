@@ -38,5 +38,9 @@
     "backupTitle": "Sigurnosni kodovi",
     "downloadBackup": "Preuzmi sigurnosne kodove",
     "done": "Gotovo"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Dvofaktorska prijava s kodom iz aplikacije za autentifikaciju, uz rezervne kodove."
   }
 }

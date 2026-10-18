@@ -38,5 +38,9 @@
     "backupTitle": "Coduri de rezervă",
     "downloadBackup": "Descarcă codurile de rezervă",
     "done": "Terminat"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Autentificare cu doi factori folosind un cod dintr-o aplicație de autentificare, cu coduri de rezervă."
   }
 }

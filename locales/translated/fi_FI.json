@@ -38,5 +38,9 @@
     "backupTitle": "Varakoodit",
     "downloadBackup": "Lataa varakoodit",
     "done": "Valmis"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Kaksivaiheinen kirjautuminen todennussovelluksen koodilla ja varakoodien avulla."
   }
 }

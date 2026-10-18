@@ -38,5 +38,9 @@
     "backupTitle": "バックアップコード",
     "downloadBackup": "バックアップコードをダウンロード",
     "done": "完了"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "認証アプリのコードを使用した2要素認証サインイン。バックアップコードも利用可能。"
   }
 }

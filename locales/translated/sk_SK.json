@@ -38,5 +38,9 @@
     "backupTitle": "Záložné kódy",
     "downloadBackup": "Stiahnuť záložné kódy",
     "done": "Hotovo"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Dvojfaktorové prihlásenie pomocou kódu z aplikácie pre overovanie, vrátane záložných kódov."
   }
 }

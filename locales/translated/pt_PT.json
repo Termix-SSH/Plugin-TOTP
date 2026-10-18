@@ -38,5 +38,9 @@
     "backupTitle": "Códigos de Backup",
     "downloadBackup": "Transferir Códigos de Backup",
     "done": "Concluído"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Início de sessão com dois fatores usando um código de uma aplicação de autenticação, com códigos de backup."
   }
 }

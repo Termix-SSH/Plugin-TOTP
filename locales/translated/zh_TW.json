@@ -38,5 +38,9 @@
     "backupTitle": "備用代碼",
     "downloadBackup": "下載備用代碼",
     "done": "完成"
+  },
+  "plugin": {
+    "name": "TOTP 兩步驟驗證",
+    "description": "使用驗證器應用程式中的驗證碼進行兩步驟驗證登入，並提供備用碼。"
   }
 }

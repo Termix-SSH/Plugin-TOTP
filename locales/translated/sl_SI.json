@@ -38,5 +38,9 @@
     "backupTitle": "Rezervne kode",
     "downloadBackup": "Prenesi rezervne kode",
     "done": "Končano"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Dvofaktorska overitev s kodo iz aplikacije za preverjanje pristnosti, z rezervnimi kodami."
   }
 }

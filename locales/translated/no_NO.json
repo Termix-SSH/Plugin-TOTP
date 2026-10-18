@@ -38,5 +38,9 @@
     "backupTitle": "Sikkerhetskoder",
     "downloadBackup": "Last ned sikkerhetskoder",
     "done": "Ferdig"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "To-faktor-innlogging med en kode fra en autentiseringsapp, med sikkerhetskoder."
   }
 }

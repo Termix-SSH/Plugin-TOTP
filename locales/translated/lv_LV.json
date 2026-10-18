@@ -38,5 +38,9 @@
     "backupTitle": "Rezerves kodi",
     "downloadBackup": "Lejupielādēt rezerves kodus",
     "done": "Gatavs"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Divu faktoru pieteikšanās ar kodu no autentifikatora lietotnes, ar rezerves kodiem."
   }
 }

@@ -38,5 +38,9 @@
     "backupTitle": "Codes de secours",
     "downloadBackup": "Télécharger les codes de secours",
     "done": "Terminé"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Connexion à deux facteurs avec un code depuis une application d'authentification, avec des codes de secours."
   }
 }

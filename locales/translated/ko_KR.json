@@ -38,5 +38,9 @@
     "backupTitle": "백업 코드",
     "downloadBackup": "백업 코드 다운로드",
     "done": "완료"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "인증 앱의 코드와 백업 코드를 사용한 2단계 인증 로그인."
   }
 }

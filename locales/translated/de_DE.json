@@ -38,5 +38,9 @@
     "backupTitle": "Wiederherstellungscodes",
     "downloadBackup": "Wiederherstellungscodes herunterladen",
     "done": "Fertig"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Zwei-Faktor-Anmeldung mit einem Code aus einer Authenticator-App, inklusive Backup-Codes."
   }
 }

@@ -38,5 +38,9 @@
     "backupTitle": "Còdigs de còpia de seguretat",
     "downloadBackup": "Descarrega els codis de còpia de seguretat",
     "done": "Fet"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Inici de sessió amb autenticació de dos factors mitjançant un codi d'una aplicació d'autenticació, amb còdigs de reserva."
   }
 }

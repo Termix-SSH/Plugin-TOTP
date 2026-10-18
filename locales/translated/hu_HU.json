@@ -38,5 +38,9 @@
     "backupTitle": "Biztonsági mentési kódok",
     "downloadBackup": "Biztonsági mentési kódok letöltése",
     "done": "Kész"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Kétfaktoros bejelentkezés egy hitelesítő alkalmazásból származó kóddal, biztonsági másolati kódokkal."
   }
 }

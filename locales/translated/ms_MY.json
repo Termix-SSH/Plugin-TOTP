@@ -38,5 +38,9 @@
     "backupTitle": "Kod Sandaran",
     "downloadBackup": "Muat Turun Kod Sandaran",
     "done": "Selesai"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Log masuk dua faktor dengan kod daripada aplikasi pengesah, beserta kod sandaran."
   }
 }

@@ -38,5 +38,9 @@
     "backupTitle": "Atsarginiai kodai",
     "downloadBackup": "Atsisiųsti atsarginius kodus",
     "done": "Atlikta"
+  },
+  "plugin": {
+    "name": "TOTP",
+    "description": "Dvejų faktorių prisijungimas su autentifikatoriaus programėlės kodu ir atsarginiais kodais."
   }
 }
