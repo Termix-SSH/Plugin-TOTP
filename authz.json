@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [],
+  "routes": {
+    "POST /plugin-api/totp/backup-codes": {
+      "access": "user",
+      "allow": ["setup"]
+    },
+    "POST /plugin-api/totp/disable": {
+      "access": "user",
+      "allow": ["setup"]
+    },
+    "POST /plugin-api/totp/enable": {
+      "access": "user",
+      "allow": ["setup"]
+    },
+    "POST /plugin-api/totp/setup": {
+      "access": "user",
+      "allow": ["setup"]
+    },
+    "GET /plugin-api/totp/status": {
+      "access": "user",
+      "allow": ["setup"]
+    }
+  }
+}
