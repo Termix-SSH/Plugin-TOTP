@@ -1,7 +1,7 @@
 {
   "id": "totp",
   "name": "TOTP",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Two-factor sign in with a code from an authenticator app, with backup codes.",
   "author": {
     "name": "Termix"
@@ -18,8 +18,8 @@
     "More than one device"
   ],
   "engine": {
-    "termix": ">=26.10.0",
-    "api": "^1.2"
+    "termix": ">=26.11.2-0",
+    "api": "^2.0.0"
   },
   "capabilities": [
     "db:own",
