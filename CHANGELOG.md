@@ -5,6 +5,7 @@
 ### Changed
 
 - Runs in its own process on Termix 26.11.2 and later, with no access to the server beyond what Termix allows it
+- On Termix 26.11.2 and later the sign in code step is drawn by Termix itself, and the settings screen runs in a sandboxed frame
 
 ## 1.0.2
 

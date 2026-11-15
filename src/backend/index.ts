@@ -15,6 +15,12 @@ export async function activate(ctx: PluginContext) {
   ctx.auth.registerSecondFactor({
     id: FACTOR_ID,
     labelKey: "factor",
+    // Termix 26.11.2 draws this step itself; the code comes back as totp_code.
+    prompt: {
+      kind: "code",
+      field: "totp_code",
+      labelKey: "challenge.enterCode",
+    },
     isEnrolled: (userId) => totp.isEnrolled(userId),
     verify: async (userId, body) => {
       const result = await totp.checkCode(

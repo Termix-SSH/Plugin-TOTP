@@ -35,8 +35,14 @@ function matchTotpStep(secret: string, code: string): number | null {
   return Math.floor(Date.now() / 1000 / STEP_SECONDS) + match.delta;
 }
 
+/** Six digits, or a backup code typed with spaces or dashes in any case. */
 export function normalizeCode(value: unknown): string {
-  return typeof value === "string" ? value.trim().toUpperCase() : "";
+  return typeof value === "string"
+    ? value
+        .replace(/[^a-zA-Z0-9]/g, "")
+        .toUpperCase()
+        .slice(0, 8)
+    : "";
 }
 
 export type TotpService = ReturnType<typeof createTotpService>;
