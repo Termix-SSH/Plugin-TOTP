@@ -38,6 +38,17 @@ function factor(target: TestServer) {
   return registered;
 }
 
+describe("login step", () => {
+  it("tells the login screen to draw one code field", async () => {
+    server = await startServer();
+    expect(factor(server).prompt).toEqual({
+      kind: "code",
+      field: "totp_code",
+      labelKey: "challenge.enterCode",
+    });
+  });
+});
+
 describe("enrolment", () => {
   it("sets up, enables, records the enrolment and reports status", async () => {
     server = await startServer();
@@ -295,6 +306,7 @@ describe("helpers", () => {
 
   it("normalises codes", () => {
     expect(normalizeCode(" abcd1234 ")).toBe("ABCD1234");
+    expect(normalizeCode("ab-cd 12 34")).toBe("ABCD1234");
     expect(normalizeCode(42)).toBe("");
   });
 });
